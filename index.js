@@ -4,7 +4,7 @@ var app = express();
 var fs = require('fs');
 var exec = require('child_process').exec;
 
-var UPLOAD_DIR = '../openQD';
+var UPLOAD_DIR = '../openQS';
 app.use(express.static('./public'));
 
 function S4() {
@@ -59,6 +59,6 @@ app.post('/share', function(req, res) {
 });
 
 
-var server = app.listen(3000, function () {
+var server = app.listen(80, function () {
 });
 
