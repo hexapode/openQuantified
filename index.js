@@ -54,7 +54,7 @@ app.post('/share', function(req, res) {
 			data : req.files.inputFile.name
 		}
 		fs.writeFileSync(req.files.inputFile.path + '.info', JSON.stringify(data));
-		exec("cd " + UPLOAD_DIR + "; git add -A; git commit -am 'data'; git pull; git push origin master;")
+		exec("cd " + UPLOAD_DIR + "; git add -A; git commit -am 'data'; git pull; git push > logs;")
 	}
 
   res.sendfile('./public/thanks.html');
