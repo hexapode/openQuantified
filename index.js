@@ -37,6 +37,14 @@ app.get('/', function(req, res) {
     res.render('./public/index.html');
 });
 
+app.get('/peak', function(req, res) {
+    res.sendfile('./public/peak.html');
+});
+
+app.get('/jawbone', function(req, res) {
+    res.sendfile('./public/jawbone.html');
+});
+
 
 app.post('/share', function(req, res) {
 	console.log(req.body);

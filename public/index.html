@@ -9,11 +9,13 @@
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	
+
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	
+		
 		<style>
 			.modal {
 				display: none;
@@ -38,6 +40,16 @@
 			.modal {
 				overflow: scroll !important;
 			}
+
+			a {
+				text-decoration: none;
+				color: #000022;
+			}
+
+			a:hover {
+					text-decoration: none;
+					color: #000022;
+			}
 		</style>
 
 	</head>
@@ -60,133 +72,19 @@
 
 			<div class="row">
 				
-				<div class="col-md-2 actionable" data-name="basisPeak">
+				<a class="col-md-2 actionable" href='/peak'>
 					<img src='./img/basis.png' width='100%' /> <br/>
 					<center><b>Basis Peak</b></center>		
-				</div>
+			</a>
 
-			</div>
+			<a class="col-md-2 actionable" href='/jawbone'>
+				<br/><br/>
+				<br/><br/>
+					<img src='./img/jawbone.png' width='100%' /> <br/><br/>
+					<center><b>Jawbone Up</b></center>		
+			</a>
 		</div>
 		
-		<div class='modal' id='basisPeak'>
-
-		 	<div class='container'>
- 				<h1> Basis Peak </h1>
-
- 				<div class="info">
-			    <h4>How do I get my Basis Peak data?</h4>
-			    <p>Export your Basis Peak Data to .csv by selecting export data in app settings. It will be best if you decide to export ALL your data. <a href='http://support.mybasis.com/hc/en-us/articles/204142550' target='blank'>(How to export my Basis Peak Data?)</a></p>
-			  </div>
- 				
- 				<div class="info">
-			    <h4>Why are you asking some personal data?</h4>
-			    <p>All your data are anonymes. However we need to know a little about yourself in order to have data that can be used in scientific study.</p>
-			  </div>
-	 		  <form class="form-horizontal" action='/share' method='post' enctype='multipart/form-data'>
-				  <div class="form-group">
-				    <label for="inputBirth" class="col-sm-5 control-label">Year of birth</label>
-				    <div class="col-sm-3">
-				      <input type="number" class="form-control" name="inputBirth" placeholder="1986">
-				    </div>
-				  </div>
-					<div class="form-group">
-						<label for="inputGender" class="col-sm-5 control-label">Gender</label>
-				    <div class="col-sm-3 radio">
-						  <label>
-						    <input type="radio" name="inputGender" value="Female" checked>
-						  	Female
-						  </label> &nbsp;&nbsp;&nbsp;&nbsp;
-						  <label>
-						    <input type="radio" name="inputGender" value="Male">
-						    Male
-						  </label>
-				    </div>
-				  </div>
-
-				  <div class="form-group">
-				    <label for="inputWeight" class="col-sm-5 control-label">Weight in kilograms</label>
-				    <div class="col-sm-3">
-				      <input type="number" class="form-control" name="inputWeight" placeholder="50">
-				    </div>
-				  </div>
-
-				   <div class="form-group">
-				    <label for="inputHeight" class="col-sm-5 control-label">Height in centimeters</label>
-				    <div class="col-sm-3">
-				      <input type="number" class="form-control" name="inputHeight" placeholder="170">
-				    </div>
-				  </div>
-
-				  <div class="form-group">
-						<label for="inputJob" class="col-sm-5 control-label">During your job are you more often</label>
-				    <div class="col-sm-3 radio">
-						  <label>
-						    <input type="radio" name="inputJob" value="up" checked>
-						  	Stand up
-						  </label> &nbsp;&nbsp;&nbsp;&nbsp;
-						  <label>
-						    <input type="radio" name="inputJob" value="sit">
-						    Sit down
-						  </label>
-						  <label>
-						    <input type="radio" name="inputJob" value="mix">
-						    Mixed
-						  </label>
-				    </div>
-				  </div>
-
-				  <div class="form-group">
-						<label for="inputHealth" class="col-sm-5 control-label">Do you consider your HEALTH</label>
-				    <div class="col-sm-3 radio">
-						  <label>
-						    <input type="radio" name="inputHealth" value="good" checked>
-						  	Good
-						  </label> &nbsp;&nbsp;&nbsp;&nbsp;
-						  <label>
-						    <input type="radio" name="inputHealth" value="avg">
-						    Average
-						  </label>
-						  <label>
-						    <input type="radio" name="inputHealth" value="bad">
-						    Bad
-						  </label>
-				    </div>
-				  </div>
-
-				  <div class="form-group">
-				    <label for="inputFile" class="col-sm-5 control-label">Your Basis Peak data export .csv</label>
-				    <div class="col-sm-3">
-				      <input type="file" class="form-control" name="inputFile">
-				    </div>
-				  </div>
-
-				  <input type='hidden' name="device" value='basisPeak' />
-
-	 				<div class="form-group">
-				    <label for="" class="col-sm-5 control-label"></label>
-				    <div class="col-sm-3">
-				     	<input type='submit' value='Share my data!' class="btn btn-success"/>
-				    </div>
-				  </div>
-
-				</form>
-				<br/><br/>
-		 	</div>
-
-		<div>
-
-		<script>
-			function showModal(e) {
-				var modal = $(e.target).attr('data-name');
-				if (!modal) {
-					modal = $(e.target).parent().attr('data-name');
-				}
-				$('#' + modal).css('display', 'block');
-			}
-
-			$('.actionable').on('click', showModal);
-
-		</script>
 
 		<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
